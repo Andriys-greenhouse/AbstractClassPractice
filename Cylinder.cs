@@ -45,5 +45,10 @@ namespace AbstractClassPractice
 
         public override double Surface() { return  2 * Math.PI * BaseRadius * (BaseRadius + Height); }
         public override double Volume() { return Math.PI * Math.Pow(BaseRadius, 2) * Height; }
+
+        public override string ToString()
+        {
+            return $"Cylinder:\n  Height: {Height}\n  Base radius: {BaseRadius}\n  Surface to volume ratio: {SurfaceToVolumeRatio()}\n";
+        }
     }
 }

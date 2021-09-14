@@ -32,5 +32,10 @@ namespace AbstractClassPractice
 
         public override double Surface() { return 6 * Math.Pow(Edge, 2); }
         public override double Volume() { return Math.Pow(Edge, 3); }
+
+        public override string ToString()
+        {
+            return $"Cube:\n  Edge: {Edge}\n  Surface to volume ratio: {SurfaceToVolumeRatio()}\n";
+        }
     }
 }

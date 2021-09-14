@@ -51,5 +51,9 @@ namespace AbstractClassPractice
 
         public override double Volume() { return Math.PI * Math.Pow(BaseRadius, 2) * Height / 3; }
 
+        public override string ToString()
+        {
+            return $"Cone:\n  Height: {Height}\n  Base radius: {BaseRadius}\n  Surface to volume ratio: {SurfaceToVolumeRatio()}\n";
+        }
     }
 }
