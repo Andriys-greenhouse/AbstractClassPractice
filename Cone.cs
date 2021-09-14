@@ -30,6 +30,18 @@ namespace AbstractClassPractice
             }
         }
 
+        public Cone(double aBaseRadius, double aHeight)
+        {
+            BaseRadius = aBaseRadius;
+            Height = aHeight;
+        }
+
+        public Cone(Body aHasVolume)
+        {
+            Height = 1;
+            BaseRadius = Math.Pow(aHasVolume.Volume() * 3 / Math.PI, 1 / 2);
+        }
+
         public override double Surface() 
         {
             double shellHeight = Math.Sqrt(Math.Pow(BaseRadius, 2) + Math.Pow(Height, 2));

@@ -19,6 +19,18 @@ namespace AbstractClassPractice
             }
         }
 
+        public Sphere(double aRadius)
+        {
+            Radius = aRadius;
+        }
+
+        public Sphere(Body aHasVolume)
+        {
+            Radius = Math.Pow(aHasVolume.Volume() * 3 / (4 * Math.PI), 1 / 3);
+        }
+
+
+
         public override double Surface() { return 4 * Math.PI * Math.Pow(Radius, 2); }
         public override double Volume() { return 4 * Math.PI * Math.Pow(Radius, 3) / 3; }
     }

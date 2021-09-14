@@ -30,6 +30,19 @@ namespace AbstractClassPractice
             }
         }
 
+        public Cylinder(double aBaseRadius, double aHeight)
+        {
+            BaseRadius = aBaseRadius;
+            Height = aHeight;
+        }
+
+        public Cylinder(Body aHasVolume)
+        {
+            Height = 1;
+            BaseRadius = Math.Pow(aHasVolume.Volume() / Math.PI, 1 / 2);
+        }
+
+
         public override double Surface() { return  2 * Math.PI * BaseRadius * (BaseRadius + Height); }
         public override double Volume() { return Math.PI * Math.Pow(BaseRadius, 2) * Height; }
     }
